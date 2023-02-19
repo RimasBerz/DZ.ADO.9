@@ -1,0 +1,110 @@
+﻿<Window x:Class="Sales.EFWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sales"
+        mc:Ignorable="d"  Loaded="Window_Loaded"
+        Title="EFWindow" Height="450" Width="800">
+    <Grid ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <!-- Monitor -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                   Content="Монитор" FontSize="20" FontWeight="DemiBold"
+                   HorizontalAlignment="Center"/>
+            <Label Grid.Column="0" Grid.Row="1"
+                   Content="Подключение" />
+            <Label Grid.Column="1" Grid.Row="1"
+                   x:Name="MonitorConnection"/>
+            <Label Grid.Column="0" Grid.Row="2"
+                   Content="Отделов" />
+            <Label Grid.Column="1" Grid.Row="2"
+                   x:Name="MonitorDepartments" Content=""/>
+            <Label Grid.Column="0" Grid.Row="3"
+                   Content="Товаров" />
+            <Label Grid.Column="1" Grid.Row="3"
+                   x:Name="MonitorProducts" Content=""/>
+            <Label Grid.Column="0" Grid.Row="4"
+                   Content="Сотрудников" />
+            <Label Grid.Column="1" Grid.Row="4"
+                   x:Name="MonitorManagers"/>
+            <Label Grid.Column="0" Grid.Row="5"
+                   Content="Продаж" />
+            <DockPanel  Grid.Column="1" Grid.Row="5">
+                <Button DockPanel.Dock="Right" x:Name="AddSalesButton" Content="+" Margin="10 2" Padding="5 0" FontSize="18" Click="AddSalesButton_Click"/>
+                <Label 
+                   x:Name="MonitorSales"/>
+               
+            </DockPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="4*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                   Content="Статистика за день" FontSize="20" FontWeight="DemiBold"
+                   HorizontalAlignment="Center"/>
+            <Label Grid.Column="0" Grid.Row="1"
+                   Content="Продаж сегодня" />
+            <Label Grid.Column="1" Grid.Row="1"
+                   x:Name="SalesTotal"/>
+            <Label Grid.Column="0" Grid.Row="2"
+                   Content="Продано Всего" />
+            <Label Grid.Column="1" Grid.Row="2"
+                   x:Name="SalesCnt" Content=""/>
+            <Label Grid.Column="0" Grid.Row="3"
+                   Content="Продано в гривнах" />
+            <Label Grid.Column="1" Grid.Row="3"
+                   x:Name="SalesMoney" Content=""/>
+            <Label Grid.Column="0" Grid.Row="4"
+                   Content="Самый эфективный менеджер" />
+            <Label Grid.Column="1" Grid.Row="4"
+                   x:Name="SalesTopManager" Content=""/>
+            <Label Grid.Column="0" Grid.Row="5"
+                   Content="Топ товар" />
+            <Label Grid.Column="1" Grid.Row="5"
+                   x:Name="SalesTopProduct" Content=""/>
+            <Label Grid.Column="0" Grid.Row="6"
+                   Content="Топ Отдел(П)" />
+            <Label Grid.Column="1" Grid.Row="6"
+                   x:Name="SalesTopDepartmentP" Content=""/>
+            <Label Grid.Column="0" Grid.Row="7"
+                   Content="Топ Отдел(СП)" />
+            <Label Grid.Column="1" Grid.Row="7"
+                   x:Name="SalesTopDepartmentS" Content=""/>
+        </Grid>
+    </Grid>
+</Window>
